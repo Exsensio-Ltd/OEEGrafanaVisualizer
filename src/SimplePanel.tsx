@@ -11,7 +11,6 @@ import { Button } from '@grafana/ui';
 import Api from 'api/api';
 
 export const SimplePanel: React.FC<PanelProps<Options>> = ({ options, data, width, height }) => {
-  const [progress, setProgress] = useState(0);
   const [parameters, setParameters] = useState<Parameters>({ product: "", station: "", calculationType: 0, reportingPeriod: 1 });
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -37,12 +36,10 @@ export const SimplePanel: React.FC<PanelProps<Options>> = ({ options, data, widt
     setIsLoading(true);
     new Api(options.dataSourceUrl).getDataSet(parameters.station, parameters.reportingPeriod, parameters.calculationType)
       .then((res: ResponseMessage) => {
-        setProgress(res.content.length ? res.content[res.content.length - 1].value : 0);
         setDataSet(res.content);
         setHasError(false);
       })
       .catch(() => {
-        setProgress(0);
         setDataSet([]);
         setHasError(true);
       })
