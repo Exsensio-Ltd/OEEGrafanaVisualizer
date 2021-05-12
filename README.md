@@ -14,3 +14,6 @@ OEE values are divided by the production time (the time that equipment is expect
 4. On the Grafana dashboard add a panel
 5. Under the panel visualisation select the `OEE`
 6. In the **Display** section set the `Base URL`. The URL of the Fiware orion brocker. By default the plugin will use `http://localhost:1026`
+
+#### Use plugin with the Docker
+docker run -d -p 3000:3000 -v "$(pwd)"/grafana-plugins:/var/lib/grafana/plugins --name=grafana grafana/grafana:7.0.0

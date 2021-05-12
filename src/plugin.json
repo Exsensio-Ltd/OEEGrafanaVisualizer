@@ -1,7 +1,7 @@
 {
   "type": "panel",
-  "name": "OEE",
-  "id": "exsensio-oy-oee",
+  "name": "KPIGrafanaVisualizer",
+  "id": "exsensio-oy-kpi",
   "info": {
     "description": "",
     "author": {

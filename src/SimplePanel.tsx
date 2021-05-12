@@ -68,8 +68,7 @@ export const SimplePanel: React.FC<PanelProps<Options>> = ({ options, data, widt
             parametersChanged={updateParameters}
           />
         </div>
-        <div className={styles.oeeContainerProgressBar}>
-          <div className={styles.oeeContainerProgress}>{progress}%</div>
+        <div className={styles.oeeContainerRefresh}>
           {hasError && <div className={styles.error}>Unhandled Error</div>}
           <Button variant="secondary" onClick={clickHandle}>Refresh</Button>
         </div>

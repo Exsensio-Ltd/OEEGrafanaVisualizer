@@ -17,14 +17,9 @@ export const getStyles = stylesFactory(() => {
       grid-area: filters;
       margin-right: 10px;
     `,
-    oeeContainerProgressBar: css`
+    oeeContainerRefresh: css`
       grid-area: progressbar;
       text-align: center;
-    `,
-    oeeContainerProgress: css`
-      font-size: 3em;
-      font-weight: 700;
-      margin-bottom: 10px;
     `,
     oeeContainerBarChart: css`
       grid-area: barchart;
