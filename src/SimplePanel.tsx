@@ -5,20 +5,20 @@ import { css, cx } from 'emotion';
 import { getStyles } from 'styles';
 import BarChart from 'components/BarChart/BarChar';
 import Loader from 'components/Loader/Loader';
-import { DataValue, Parameters, ResponseMessage } from 'models';
+import { CalculationType, DataValue, Parameters, ResponseMessage } from 'models';
 import ProductSelector from 'components/ProductSelector/ProductSelector';
 import { Button } from '@grafana/ui';
 import Api from 'api/api';
 
 export const SimplePanel: React.FC<PanelProps<Options>> = ({ options, data, width, height }) => {
-  const [parameters, setParameters] = useState<Parameters>({ product: "", station: "", calculationType: 0, reportingPeriod: 1 });
+  const [parameters, setParameters] = useState<Parameters>({ product: '', station: '', calculationType: CalculationType.Simple, reportingPeriod: 1 });
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [dataSet, setDataSet] = useState<DataValue[]>([]);
 
   const styles = getStyles();
 
-  const clickHandle = () => setParameters(JSON.parse(JSON.stringify(parameters)));
+  const clickHandle = () => setParameters({ ...parameters });
 
   const updateParameters = (newParams: Parameters) => setParameters({ ...parameters, ...newParams });
 

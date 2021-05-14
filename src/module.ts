@@ -7,6 +7,6 @@ export const plugin = new PanelPlugin<Options>(SimplePanel).setPanelOptions(buil
     .addTextInput({
       path: 'dataSourceUrl',
       name: 'Data Source URL',
-      defaultValue: 'http://localhost:5000'
+      defaultValue: 'http://localhost:51803'
     });
 });

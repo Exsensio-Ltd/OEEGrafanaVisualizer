@@ -38,4 +38,7 @@ export type ResponseMessage = {
   message: string;
 };
 
-export type CalculationType = 0 | 1;
+export enum CalculationType {
+  Simple = 0,
+  Advanced = 1
+}

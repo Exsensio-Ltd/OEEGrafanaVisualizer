@@ -1,8 +1,8 @@
-import { SelectOption } from 'models';
+import { CalculationType, SelectOption } from 'models';
 
 export const CalculationTypes: SelectOption[] = [
-  { text: 'Simple', value: 0 },
-  { text: 'Acvanced', value: 1 }
+  { text: 'Simple', value: CalculationType.Simple },
+  { text: 'Acvanced', value: CalculationType.Advanced }
 ];
 
 export const Periods: SelectOption[] = [

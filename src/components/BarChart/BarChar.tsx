@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataValue, Parameters } from 'models';
+import { CalculationType, DataValue, Parameters } from 'models';
 import { Bar } from 'react-chartjs-2';
 
 interface Props {
@@ -59,7 +59,7 @@ const BarChart: React.FC<Props> = ({ parameters, width, height, dataSet }) => {
 
     const dataSets: any = [barChart];
 
-    if (parameters?.calculationType === 1) {
+    if (parameters?.calculationType === CalculationType.Advanced) {
       dataSets.push(lineChartAvailability);
       dataSets.push(lineChartPerformance);
       dataSets.push(lineChartQuality);
@@ -71,11 +71,7 @@ const BarChart: React.FC<Props> = ({ parameters, width, height, dataSet }) => {
     };
   };
 
-  return (
-    <div>
-      <Bar data={data} type="bar" width={width} height={height} />
-    </div>
-  );
+  return <Bar data={data} type="bar" width={width} height={height} />;
 };
 
 export default BarChart;

@@ -23,7 +23,7 @@ const Selector: React.FC<Props> = ({ options, callback, label, width = 'auto' })
   }
 
   return (
-    <div className={styles.filterRow} style={{width: width}}>
+    <div className={styles.filterRow} style={{ width: width }}>
       {label && <label className={styles.filterLabel}>{label}:</label>}
       <select className={styles.filterSelect} onChange={setOption}>
         {options.map((option) =>
