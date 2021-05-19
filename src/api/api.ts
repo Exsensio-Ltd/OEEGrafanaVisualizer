@@ -21,7 +21,7 @@ class Api {
   }
 
   getDataSet = async (station: string, reportingPeriod: number, type: CalculationType) => {
-    const response = await fetch(`${this.dataSourceUrl}/api/oee/calculate?station=${station}&reportingPeriod=${reportingPeriod}&type=${type}`, { headers: this.headers });
+    const response = await fetch(`${this.dataSourceUrl}/api/oee/calculate?id=${station}&reportingPeriod=${reportingPeriod}&type=${type}`, { headers: this.headers });
     if (!response.ok) {
       throw response;
     }

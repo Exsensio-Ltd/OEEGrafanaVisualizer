@@ -1,11 +1,11 @@
 {
   "type": "panel",
-  "name": "KPIGrafanaVisualizer",
-  "id": "exsensio-oy-kpi",
+  "name": "OEE Grafana Visualizer",
+  "id": "oee-grafana-visualiser",
   "info": {
     "description": "",
     "author": {
-      "name": "Exsensio Oy",
+      "name": "Exsensio Ltd",
       "url": "https://exsensio.com/"
     },
     "keywords": [],
