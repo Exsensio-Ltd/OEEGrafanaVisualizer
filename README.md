@@ -27,7 +27,7 @@ OEE values are divided by the production time (the time that equipment is expect
 
 ## Use plugin with the Docker
 
-docker run -d -p 3000:3000 -v "$(pwd)"/grafana-plugins:/var/lib/grafana/plugins --name=grafana grafana/grafana:7.0.0
+`docker run -d -p 3000:3000 -v "$(pwd)"/grafana-plugins:/var/lib/grafana/plugins --name=grafana grafana/grafana:7.0.0`
 
 ## License
 
