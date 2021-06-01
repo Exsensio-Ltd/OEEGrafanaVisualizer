@@ -1,6 +1,7 @@
 # OEE Grafana Plugin
 
 ![GitHub](https://img.shields.io/github/license/Exsensio-Ltd/OEEGrafanaVisualizer)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4943/badge)](https://bestpractices.coreinfrastructure.org/projects/4943)
 
 The plugin built with React.js for Grafana Panel and provides representation of the results of OEE (Overall Equipment Effectiveness) for specific device in bar chart and additionnaly lines for `Availability`, `Performance`, `Quality`.
 
